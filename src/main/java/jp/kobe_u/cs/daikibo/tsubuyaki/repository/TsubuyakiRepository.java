@@ -8,5 +8,7 @@ import jp.kobe_u.cs.daikibo.tsubuyaki.entity.Tsubuyaki;
 @Repository
 
 public interface TsubuyakiRepository extends CrudRepository<Tsubuyaki, Long> {
+    // つぶやきを検索するカスタムクエリを追加
+    public Iterable<Tsubuyaki> findByCommentLike(String keyword);
 
 }
